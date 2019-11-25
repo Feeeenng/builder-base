@@ -38,7 +38,8 @@ RUN wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz &
 
 RUN wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     chmod +x jq-linux64 && \
-    mv jq-linux64 /usr/bin/
+
+    mv jq-linux64 /usr/bin/jq
 
 RUN wget https://download.samba.org/pub/rsync/src/rsync-3.0.6.tar.gz && \
     tar -zxvf rsync-3.0.6.tar.gz    && \
