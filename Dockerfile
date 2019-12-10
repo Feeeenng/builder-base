@@ -68,6 +68,6 @@ WORKDIR /home/jenkins
 #ENV PATH $PATH:/usr/bin/sonar-scanner-$SONAR_SCANNER_VERSION-linux/bin
 
 COPY ./ ./
-RUN ./hack/install_utils.sh && rm -rf ./*
+RUN chmod +x ./hack/install_utils.sh && ./hack/install_utils.sh && rm -rf ./*
 
 CMD ["docker","version"]
